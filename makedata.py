@@ -30,6 +30,8 @@ def ran(lst):
 def ssn():
     return '%d%d%d-%d%d-%d%d%d%d' % tuple(random.sample(range(9),9))
      
+print "%13s %13s, %13s, %6s, %13s %6s %11s" % \
+    ('first', 'last', 'city', 'state', 'ssn', 'sal', 'dob')
 LISTLEN = 16
 people = []
 for person in range(LISTLEN):
@@ -41,6 +43,6 @@ for person in range(LISTLEN):
     vals=[]
     for v in 'first last city state ssn sal dob'.split():
         vals.append(data[v])
-    print "%13s %13s, %13s, %3s, SSN: %13s %6s %11s" % tuple(vals)
+    print "%13s %13s, %13s, %6s, %13s %6s %11s" % tuple(vals)
     
     
